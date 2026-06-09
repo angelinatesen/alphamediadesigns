@@ -440,28 +440,22 @@
       width: 48px;
       height: 48px;
       border-radius: 50%;
-      background: var(--rust-pale);
+      background: var(--rust);
       display: flex;
       align-items: center;
       justify-content: center;
       margin-bottom: 1.75rem;
-      transition: background 0.3s ease;
     }
-
-    .service-card:hover .service-icon { background: var(--rust); }
 
     .service-icon svg {
       width: 22px;
       height: 22px;
-      stroke: var(--rust);
+      stroke: var(--ivory);
       fill: none;
       stroke-width: 1.5;
       stroke-linecap: round;
       stroke-linejoin: round;
-      transition: stroke 0.3s ease;
     }
-
-    .service-card:hover .service-icon svg { stroke: var(--ivory); }
 
     .service-name {
       font-family: var(--font-display);
@@ -481,17 +475,23 @@
     .service-link {
       display: inline-flex;
       align-items: center;
-      gap: 0.4rem;
-      margin-top: 1.4rem;
+      gap: 0.5rem;
+      margin-top: 1.6rem;
+      font-family: var(--font-body);
       font-size: 0.82rem;
       font-weight: 600;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--saffron-dark);
-      transition: gap 0.2s;
+      color: var(--brown);
+      background: var(--ivory);
+      padding: 0.7rem 1.5rem;
+      border: 2px solid var(--saffron);
+      border-radius: 8px;
+      animation: formGlow 2.8s ease-in-out infinite;
+      transition: gap 0.2s, background 0.2s;
     }
 
-    .service-link:hover { gap: 0.7rem; }
+    .service-link:hover { gap: 0.8rem; background: var(--saffron-light); }
 
     /* =====================
        SERVICE BUCKETS
@@ -1034,7 +1034,7 @@
     }
 
     @media (prefers-reduced-motion: reduce) {
-      .contact-form { animation: none; }
+      .contact-form, .service-link { animation: none; }
     }
 
     .form-row {
@@ -1311,7 +1311,6 @@
           <p class="bucket-label">Monthly partnership</p>
           <h3 class="bucket-title">Social Media <em>Management</em></h3>
           <p class="bucket-tagline">Full-service monthly social media — content, scheduling, engagement, and reporting. Your brand stays on, even when you're off.</p>
-          <span class="bucket-price">Starting at $599/mo · Custom plans available</span>
         </div>
 
         <div class="tier-grid">
@@ -1395,7 +1394,7 @@
             </div>
             <h3 class="service-name">Mailings</h3>
             <p class="service-desc">From holiday cards and birthday outreach to corporate gifts and client gestures — coordinated, addressed, and out the door on time. Great for national holidays, anniversaries, and any moment worth marking.</p>
-            <a href="#contact" class="service-link">Let's Talk <span>→</span></a>
+            <a href="#contact" class="service-link">Let's Connect <span>→</span></a>
           </div>
 
           <div class="service-card">
@@ -1404,7 +1403,7 @@
             </div>
             <h3 class="service-name">Packaging &amp; Customer Appreciation</h3>
             <p class="service-desc">From a single boutique-style presentation to grand-scale event packaging — custom wrapping, ribbons, tags, and styled presentation. Whether it's a client thank-you, a corporate gift, or one hundred perfectly wrapped pieces, every detail is intentional.</p>
-            <a href="#contact" class="service-link">Let's Talk <span>→</span></a>
+            <a href="#contact" class="service-link">Let's Connect <span>→</span></a>
           </div>
 
           <div class="service-card">
@@ -1413,7 +1412,7 @@
             </div>
             <h3 class="service-name">Graphic Design</h3>
             <p class="service-desc">Logos, branded graphics, flyers, social posts, and visual identity work — polished, intentional design for the projects that need to land. Single-project pieces or coordinated brand systems.</p>
-            <a href="#contact" class="service-link">Let's Talk <span>→</span></a>
+            <a href="#contact" class="service-link">Let's Connect <span>→</span></a>
           </div>
 
           <div class="service-card">
@@ -1422,7 +1421,7 @@
             </div>
             <h3 class="service-name">Space Organization</h3>
             <p class="service-desc">Organizing your space, side by side. It isn't about what you throw away — it's about knowing what you have and being able to reach it. If you can't see it, you can't use it. We work through it together until everything has its place.</p>
-            <a href="#contact" class="service-link">Let's Talk <span>→</span></a>
+            <a href="#contact" class="service-link">Let's Connect <span>→</span></a>
           </div>
 
         </div>
