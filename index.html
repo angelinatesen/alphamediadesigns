@@ -1175,6 +1175,8 @@
 
     /* Offset anchor scrolling to account for sticky nav height */
     section[id] { scroll-margin-top: 120px; }
+    /* Contact buttons land at the form fields, with a little breathing room */
+    #contact-form { scroll-margin-top: 2rem; }
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(24px); }
       to   { opacity: 1; transform: translateY(0); }
@@ -1250,7 +1252,7 @@
         <li><a href="#about">About</a></li>
         <!-- Portfolio nav link hidden until images ready — remove style to restore -->
         <li style="display:none;"><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact" class="nav-cta">Get in Touch</a></li>
+        <li><a href="#contact-form" class="nav-cta">Get in Touch</a></li>
       </ul>
 
       <div class="nav-toggle" id="navToggle" aria-label="Toggle menu">
@@ -1286,7 +1288,7 @@
       </p>
 
       <div class="hero-actions">
-        <a href="#contact" class="btn btn-primary">Contact Me to Start Your Project</a>
+        <a href="#contact-form" class="btn btn-primary">Contact Me to Start Your Project</a>
         <!-- "View My Work" hidden per 's request — restore by removing display:none -->
         <a href="#portfolio" class="btn btn-secondary" style="display:none;">View My Work</a>
       </div>
@@ -1373,7 +1375,7 @@
 
         <div class="tier-cta-wrap">
           <p class="tier-cta-note">Every plan is custom — let's find the right fit for your business.</p>
-          <a href="#contact" class="btn btn-primary">Contact to Schedule a Consultation</a>
+          <a href="#contact-form" class="btn btn-primary">Contact to Schedule a Consultation</a>
         </div>
       </div>
 
@@ -1394,7 +1396,7 @@
             </div>
             <h3 class="service-name">Mailings</h3>
             <p class="service-desc">From holiday cards and birthday outreach to corporate gifts and client gestures — coordinated, addressed, and out the door on time. Great for national holidays, anniversaries, and any moment worth marking.</p>
-            <a href="#contact" class="service-link">Let's Connect <span>→</span></a>
+            <a href="#contact-form" class="service-link">Let's Connect <span>→</span></a>
           </div>
 
           <div class="service-card">
@@ -1403,7 +1405,7 @@
             </div>
             <h3 class="service-name">Packaging &amp; Customer Appreciation</h3>
             <p class="service-desc">From a single boutique-style presentation to grand-scale event packaging — custom wrapping, ribbons, tags, and styled presentation. Whether it's a client thank-you, a corporate gift, or one hundred perfectly wrapped pieces, every detail is intentional.</p>
-            <a href="#contact" class="service-link">Let's Connect <span>→</span></a>
+            <a href="#contact-form" class="service-link">Let's Connect <span>→</span></a>
           </div>
 
           <div class="service-card">
@@ -1412,7 +1414,7 @@
             </div>
             <h3 class="service-name">Graphic Design</h3>
             <p class="service-desc">Logos, branded graphics, flyers, social posts, and visual identity work — polished, intentional design for the projects that need to land. Single-project pieces or coordinated brand systems.</p>
-            <a href="#contact" class="service-link">Let's Connect <span>→</span></a>
+            <a href="#contact-form" class="service-link">Let's Connect <span>→</span></a>
           </div>
 
           <div class="service-card">
@@ -1421,7 +1423,7 @@
             </div>
             <h3 class="service-name">Space Organization</h3>
             <p class="service-desc">Organizing your space, side by side. It isn't about what you throw away — it's about knowing what you have and being able to reach it. If you can't see it, you can't use it. We work through it together until everything has its place.</p>
-            <a href="#contact" class="service-link">Let's Connect <span>→</span></a>
+            <a href="#contact-form" class="service-link">Let's Connect <span>→</span></a>
           </div>
 
         </div>
@@ -1567,7 +1569,7 @@
 
         </div>
 
-        <div class="contact-form fade-in">
+        <div class="contact-form fade-in" id="contact-form">
           <form
             name="contact"
             method="POST"
@@ -1661,7 +1663,7 @@
             <li><a href="#about">About</a></li>
             <!-- Portfolio footer link hidden until images ready — remove style to restore -->
             <li style="display:none;"><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact-form">Contact</a></li>
           </ul>
         </div>
 
