@@ -586,7 +586,7 @@
 
     .tier-card {
       background: var(--ivory);
-      border: 1px solid var(--ivory-dark);
+      border: 2px solid var(--rust);
       border-radius: 4px;
       padding: 3rem 2.25rem 2.75rem;
       display: flex;
@@ -601,9 +601,14 @@
     }
 
     .tier-card--featured {
-      border: 2px solid var(--rust);
+      border: 2px solid var(--saffron);
       background: var(--white);
       padding-top: 2.75rem;
+      box-shadow: 0 0 18px 2px rgba(255, 200, 0, 0.45);
+    }
+
+    .tier-card--featured:hover {
+      box-shadow: 0 0 22px 4px rgba(255, 200, 0, 0.55), 0 10px 28px rgba(44, 24, 16, 0.08);
     }
 
     .tier-badge {
@@ -681,19 +686,8 @@
       font-size: 0.95rem;
       color: var(--brown-mid);
       line-height: 1.55;
-      padding: 0.4rem 0 0.4rem 1.4rem;
+      padding: 0.4rem 0;
       position: relative;
-    }
-
-    .tier-inclusions li::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0.82rem;
-      width: 0.45rem;
-      height: 0.45rem;
-      background: var(--rust);
-      border-radius: 50%;
     }
 
     .tier-cta-wrap {
@@ -1324,32 +1318,28 @@
             <div class="tier-price" style="font-size:1.5rem;">Starting at $697<span class="tier-price-suffix">/ mo · custom plan quoted to fit your goals</span></div>
             <div class="tier-divider"></div>
             <ul class="tier-inclusions">
-              <li>10 posts per month</li>
-              <li>4 Static Images w/ Audio</li>
-              <li>5 Reels</li>
-              <li>1 Carousel</li>
+              <li><u>10</u> posts per month</li>
+              <li><u>4</u> Static Images w/ Audio</li>
+              <li><u>5</u> Reels</li>
+              <li><u>1</u> Carousel</li>
               <li>Captions with hashtag research</li>
-              <li>Monthly content calendar</li>
               <li>Monthly performance summary</li>
             </ul>
           </div>
 
           <!-- STANDARD (featured) -->
           <div class="tier-card tier-card--featured">
-            <span class="tier-badge">Most popular</span>
             <h4 class="tier-name">Growth</h4>
             <p class="tier-tagline">For established businesses ready to grow visibility and engagement.</p>
             <div class="tier-price" style="font-size:1.5rem;">Starting at $1,097<span class="tier-price-suffix">/ mo · quoted to fit your platforms and goals</span></div>
             <div class="tier-divider"></div>
             <ul class="tier-inclusions">
-              <li>20 posts per month</li>
-              <li>8 Static Images w/ Audio</li>
-              <li>8 Reels</li>
-              <li>1 Story Set</li>
-              <li>Daily weekday community management</li>
-              <li>Bi-weekly check-in calls</li>
-              <li>Monthly analytics with recommendations</li>
-              <li>Quarterly campaign planning</li>
+              <li><u>20</u> posts per month</li>
+              <li><u>8</u> Static Images w/ Audio</li>
+              <li><u>8</u> Reels</li>
+              <li><u>1</u> Story Set</li>
+              <li>Monthly content calendar</li>
+              <li>Monthly performance summary</li>
             </ul>
           </div>
 
@@ -1360,14 +1350,12 @@
             <div class="tier-price" style="font-size:1.5rem;">Starting at $1,697<span class="tier-price-suffix">/ mo · quoted to fit your platforms and goals</span></div>
             <div class="tier-divider"></div>
             <ul class="tier-inclusions">
-              <li>25+ posts per month</li>
-              <li>15–20 Reels / Static (flex)</li>
-              <li>2–4 Carousels</li>
-              <li>2–4 Story Sets</li>
-              <li>Daily + weekend community management</li>
-              <li>Weekly strategy calls</li>
-              <li>Quarterly campaign — concept, design, execution</li>
-              <li>Monthly email newsletter</li>
+              <li><u>25+</u> posts per month</li>
+              <li><u>15–20</u> Reels / Static (flex)</li>
+              <li><u>2–4</u> Carousels</li>
+              <li><u>2–4</u> Story Sets</li>
+              <li>Monthly content calendar</li>
+              <li>Monthly performance summary</li>
             </ul>
           </div>
 
