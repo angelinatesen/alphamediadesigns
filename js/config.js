@@ -5,9 +5,11 @@
    ===================================================== */
 window.AMD_CONFIG = {
 
-  /* Booking link (Calendly or similar). Leave empty ("") until Angelina
-     supplies it. While empty, every "Book a 15-minute call" button sends
-     visitors to the contact form instead. */
+  /* Booking link (Calendly or similar). Leave empty ("") until Angelina has
+     one. While empty, the site does not mention booking: the buttons read
+     "Tell me about your project" / "Get in Touch" and go to the contact form.
+     Paste the link between the quotes and every button switches to "Book a
+     15-minute call" / "Book a Call" and opens the link. */
   BOOKING_URL: "",
 
   /* Email shown on the homepage, contact section, and footer. */

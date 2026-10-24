@@ -87,7 +87,7 @@
 
   <!-- ========================
        NAVIGATION
-       Menu: Services · Work · Plans · About · Extras · Book a Call
+       Menu: Services · Work · Plans · About · Extras · Get in Touch (becomes "Book a Call" once BOOKING_URL is set)
        "Work" stays hidden until WORK_SAMPLES in /js/config.js has entries.
   ======================== -->
   <nav class="nav" id="nav" aria-label="Main">
@@ -108,11 +108,11 @@
         <li><a href="#plans">Plans</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="/extras/">Extras</a></li>
-        <li><a href="#contact-form" class="nav-cta" data-booking>Book a Call</a></li>
+        <li><a href="#contact-form" class="nav-cta" data-booking data-booking-label="Book a Call">Get in Touch</a></li>
       </ul>
 
       <div class="nav-mobile-actions">
-        <a href="#contact-form" class="nav-cta nav-cta-mobile" data-booking>Book a Call</a>
+        <a href="#contact-form" class="nav-cta nav-cta-mobile" data-booking data-booking-label="Book a Call">Get in Touch</a>
         <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
           <span></span><span></span><span></span>
         </button>
@@ -145,7 +145,7 @@
       </p>
 
       <div class="hero-actions">
-        <a href="#contact-form" class="btn btn-primary" data-booking>Book a 15-minute call</a>
+        <a href="#contact-form" class="btn btn-primary" data-booking data-booking-label="Book a 15-minute call">Tell me about your project</a>
         <a href="#plans" class="btn btn-secondary">See the plans</a>
       </div>
 
@@ -280,7 +280,7 @@
 
       <div class="tier-cta-wrap fade-in">
         <p class="tier-cta-note">Every plan is custom. Let's find the right fit for your business.</p>
-        <a href="#contact-form" class="btn btn-primary" data-booking>Book a 15-minute call</a>
+        <a href="#contact-form" class="btn btn-primary" data-booking data-booking-label="Book a 15-minute call">Tell me about your project</a>
       </div>
     </div>
   </section>
@@ -371,7 +371,7 @@
           <span class="about-title-tag">Founder, Alpha Media Designs</span>
 
           <div class="about-actions">
-            <a href="#contact-form" class="btn btn-primary" data-booking>Book a 15-minute call</a>
+            <a href="#contact-form" class="btn btn-primary" data-booking data-booking-label="Book a 15-minute call">Get in touch</a>
           </div>
         </div>
 
@@ -421,7 +421,7 @@
             </div>
           </div>
 
-          <div class="contact-actions">
+          <div class="contact-actions" hidden data-booking-only>
             <a href="#contact-form" class="btn btn-primary" data-booking>Book a 15-minute call</a>
           </div>
         </div>

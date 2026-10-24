@@ -29,7 +29,7 @@ Open `js/config.js`. Everything below is a single edit in that file.
 
 | What | Setting | Notes |
 |---|---|---|
-| Booking link | `BOOKING_URL` | Paste the Calendly (or similar) link between the quotes. Until then, every "Book a 15-minute call" button sends visitors to the contact form. |
+| Booking link | `BOOKING_URL` | Paste the Calendly (or similar) link between the quotes. Until then, the site never mentions booking: the buttons say "Tell me about your project" or "Get in Touch" and go to the contact form. Once the link is in, they switch to "Book a 15-minute call" and open it. |
 | Email address | `CONTACT_EMAIL` | Shown in the hero, contact section, and footer. |
 | Work samples | `WORK_SAMPLES` | Add one entry per sample (see the example in the file). Put the image or video in `images/work/`. The Work section and its menu link appear automatically once the list has entries. |
 | Testimonials | `SHOW_TESTIMONIALS` | Set to `true` only after the placeholder quotes in `index.html` (inside `<template id="testimonials-template">`) are replaced with real ones. |

@@ -28,13 +28,20 @@
   }
 
   /* ---------- Booking buttons ----------
-     Any <a data-booking> keeps its fallback href (the contact form)
-     until BOOKING_URL is filled in; then every one points at the link. */
+     While BOOKING_URL is empty, each <a data-booking> reads as a contact
+     button (its default wording) and links to the contact form. Once the
+     link is filled in, every one points at it and switches to its
+     data-booking-label wording; anything marked data-booking-only appears. */
   if (cfg.BOOKING_URL) {
     document.querySelectorAll('[data-booking]').forEach(function (a) {
       a.setAttribute('href', cfg.BOOKING_URL);
       a.setAttribute('target', '_blank');
       a.setAttribute('rel', 'noopener noreferrer');
+      var label = a.getAttribute('data-booking-label');
+      if (label) { a.textContent = label; }
+    });
+    document.querySelectorAll('[data-booking-only]').forEach(function (el) {
+      el.removeAttribute('hidden');
     });
   }
 
