@@ -1,85 +1,81 @@
 # Alpha Media Designs
 **Website for alphamediadesigns.com**
 
-Custom visual design by Angelina N. Tesen — invitations, event styling, floral arrangements, gift design, social media content, and branding.
+Monthly social media management for Colorado Springs real estate pros and small businesses, by Angelina N. Tesen, plus client care extras (mailings, packaging, graphic design, and space organization).
 
 ---
 
-## How to Update Your Website
+## How the site is built
 
-You don't need to know how to code to make changes. Everything on your site lives in the single file `index.html`. You can edit it directly in your browser on GitHub. Any change you save here will automatically update your live website within about 30 seconds.
+A static site, no build step. Vercel deploys every push to `main` to alphamediadesigns.com automatically; any other branch gets a preview URL.
+
+```
+index.html             ← Homepage
+extras/index.html      ← Client Care Extras page (/extras/)
+css/site.css           ← One stylesheet shared by both pages
+js/config.js           ← Site settings: booking link, email, work samples, testimonials switch
+js/site.js             ← Page behaviour (menu, booking buttons, work gallery, form tracking)
+images/                ← Logo, headshot, favicon, sunflower
+images/work/           ← Work samples for the homepage gallery (add files here)
+preview.png            ← Link preview card (shown when sharing on text/social)
+sitemap.xml, robots.txt, google4071ae8b9b43a3c2.html  ← search engine files (leave as is)
+```
 
 ---
 
-## Making a Change (Step-by-Step)
+## The one-line changes (js/config.js)
 
-1. Go to your repository on GitHub and click on **`index.html`**
-2. Click the **pencil icon** (✏️) in the top-right corner of the file to edit
-3. Use **Ctrl+F** (or Cmd+F on Mac) to search for the text you want to change
+Open `js/config.js`. Everything below is a single edit in that file.
+
+| What | Setting | Notes |
+|---|---|---|
+| Booking link | `BOOKING_URL` | Paste the Calendly (or similar) link between the quotes. Until then, every "Book a 15-minute call" button sends visitors to the contact form. |
+| Email address | `CONTACT_EMAIL` | Shown in the hero, contact section, and footer. |
+| Work samples | `WORK_SAMPLES` | Add one entry per sample (see the example in the file). Put the image or video in `images/work/`. The Work section and its menu link appear automatically once the list has entries. |
+| Testimonials | `SHOW_TESTIMONIALS` | Set to `true` only after the placeholder quotes in `index.html` (inside `<template id="testimonials-template">`) are replaced with real ones. |
+
+---
+
+## Making a text change on GitHub
+
+1. Open the file on GitHub (`index.html` for the homepage, `extras/index.html` for the extras page, `js/config.js` for the settings above)
+2. Click the **pencil icon** (✏️) to edit
+3. Use **Ctrl+F** (or Cmd+F on Mac) to find the text you want to change
 4. Make your edit
-5. Scroll to the bottom and click the green **"Commit changes"** button
-6. Your live site will update automatically — no other steps needed
+5. Scroll down and click **Commit changes**
+6. The live site updates automatically within about a minute
 
 ---
 
-## Current Site Structure
+## Common updates
 
-```
-index.html       ← The entire website (one file)
-README.md        ← This guide
-preview.png      ← Link preview card (shown when sharing on text/social)
-images/          ← Folder for portfolio work photos (ready and waiting)
-```
+### Update the "About Angelina" text
+In `index.html`, search for `About Angelina`. The three paragraphs follow.
 
-> **Note:** Angelina's headshot is embedded directly inside `index.html` as code — it does not appear as a separate file in this repository. This is intentional and works perfectly fine.
+### Change plan prices or inclusions
+In `index.html`, search for `tier-card`. Each plan is one block.
 
----
+### Add or change a Client Care Extra
+In `extras/index.html`, search for `service-card`. Each extra is one block. The same four extras are listed in the footer "Services" column of both pages and in the contact form dropdown in `index.html`.
 
-## Sections Currently Hidden
-
-The following sections are built into the site but hidden until real content is ready:
-
-- **Portfolio** — waiting on work sample photos
-- **Testimonials** — waiting on client quotes
-
-When you're ready to bring these back, contact Claude at claude.ai with your `index.html` and ask to unhide the portfolio or testimonials section.
-
----
-
-## Common Updates
-
-### Update the "About Me" text
-Search for `Starting with an idea` — the bio paragraph begins there. Edit the text between the `<p>` and `</p>` tags.
-
-### Add portfolio photos and bring that section back
-1. Upload work photos to the `images/` folder in this repository (click the folder, then **Add file → Upload files**)
-2. Name them something simple like `portfolio-1.jpg`, `portfolio-2.jpg`, etc.
-3. Then contact Claude at claude.ai with your `index.html` to unhide the portfolio section and wire in the photos
-
-### Add real client testimonials
-When you have quotes from clients, contact Claude at claude.ai with your `index.html` and provide the quotes, names, and event types. Claude will update the testimonials section and unhide it.
-
-### Update social media links
-Search for `social-link` — you'll find three links (Instagram, Facebook, Pinterest). Replace each `href="#"` with your real profile URL, for example:
-```
-href="https://www.instagram.com/alphamediadesigns"
-```
+### Social media links
+In the footer of both `index.html` and `extras/index.html`, search for `social-link`. The Instagram and Facebook links are also listed under `sameAs` in the schema block near the top of `index.html`.
 
 ### Update the link preview card
-The file `preview.png` in the root of this repository controls what appears when someone shares `alphamediadesigns.com` in a text message or on social media. To update it, replace this file with a new version of the same name.
+Replace `preview.png` with a new file of the same name.
 
 ---
 
-## Who Helps With This Site
+## Contact form
 
-This site was built and is maintained with the help of Claude (claude.ai). If something breaks or you want to add a new section, bring this `README.md` file and your `index.html` to a new Claude conversation and describe what you want changed.
-
----
-
-## Contact Form
-
-The contact form is powered by [Formspree](https://formspree.io). Form submissions go directly to your email. Log in at formspree.io to view past submissions or change your notification email.
+The contact form posts to [Formspree](https://formspree.io) (form `mwvwzpyv`). Submissions go to the notification email set in the Formspree dashboard. Hidden UTM fields record where a visitor came from.
 
 ---
 
-*Last updated: April 2026*
+## Who helps with this site
+
+Built and maintained by Digital Navigation Solutions (Yvonne Padilla) with Claude. For changes, contact Yvonne.
+
+---
+
+*Last updated: October 2026*
